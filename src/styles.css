@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: lightgray;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+/* =14px */
+/*h1   { font-size: 2.4rem; } !* =24px *!*/
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+.navigation {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 25px;
+}
+
+
+.tab-logo {
+    margin: auto;
+}
+
+
+.tab.is-active {
+    color: white;
+    background: #00a970;
+}
+
+
+.tabs__flags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tabs__flags > a {
+    margin: 20px;
+}
+
+.tabs__flags img {
+    height: 26px;
+}
+
+
+@media screen and (min-width: 839px) {
+    .tab:hover {
+        color: white;
+        background: rgba(0, 169, 112, 0.5);
+        transition: all 0.5s ease;
+    }
+
+    .mol-home-logo-img {
+        max-width: 40%;
+    }
+
+}
+
+nav.mobile {
+    display: none;
+}
+
+.logo {
+    height: 40px;
+}
+
+header {
+    height: 70px;
+}
+
+section {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+section.cover {
+    height: calc(100vh - 54px);
+    background: url("assets/LaMolanta__cover--big.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+section.cover > article {
+    width: 50%;
+    margin: 0 auto;
+}
+
+article .cover__logo {
+    width: 100%;
+    margin-top: 15vh;
+}
+
+article .cover__text {
+    width: 100%;
+    border: 1px solid whitesmoke;
+    /*margin-top: 10vh;*/
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10%;
+    text-align: center;
+    font-size: 4.5vmin;
+}
+
+section.intro {
+    background-color: white;
+    padding: 60px 0;
+}
+
+section.intro > article {
+    font-size: 1.25rem;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-transform: uppercase;
+    max-width: calc(70ch - 20px);
+    line-height: 1.5;
+    text-align: center;
+}
+
+section.intro img {
+    max-width: 95%;
+}
+
+section.intro a {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #00a970;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+    transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+section.intro a:hover,
+section.intro a:focus {
+    background: rgba(0, 169, 112, 0.5);
+}
+
+section.intro a:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+section.intro a:active {
+    transform: scale(0.99);
+}
+
+section.us {
+    padding: 1px 0;
+    background: url(assets/molanta__us--big.jpg) no-repeat left top white;
+    background-size: contain;
+}
+
+section.us > article {
+    color: whitesmoke;
+    max-width: 60ch;
+    padding: 80px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+section.info {
+    background-color: white;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section.info > article {
+    margin: 0 5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    font-size: 12px;
+    background-color: darkgray;
+}
+
+footer span {
+    color: #e25555;
+}
+
+@media all and (max-width: 1024px) {
+}
+
+@media all and (max-width: 839px) {
+    section.cover {
+        background-image: url("assets/LaMolanta__cover--small.jpg");
+    }
+
+    section.us {
+        background: url(assets/molanta__us--small.jpg) no-repeat left top white;
+    }
+/*}*/
+/**/
+/*@media all and (max-width: 480px) {*/
+
+    section p {
+        font-size: 1rem;
+        /*width: 60ch;*/
+    }
+
+    section.cover {
+        margin-top: -20px;
+    }
+
+    section.intro {
+        padding: 10px 0;
+    }
+
+    section.intro article {
+        width: 90%;
+        line-height: 1.5;
+    }
+
+    section.us article {
+        width: 90%;
+        line-height: 1.5;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    section.info {
+        flex-direction: column;
+    }
+
+    .tab-logo {
+        display: none;
+    }
+
+    nav.mobile {
+        position: fixed;
+        width: 100%;
+        display: block;
+        background-color: white;
+    }
+
+    nav > .mobile__block {
+        width: 44px;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        height: 100%;
+        padding-top: 70px;
+        left: -1000px;
+        transition: left 2s ease;
+    }
+
+    .navigation.shown {
+        left: 0;
+        transition: left 1s ease;
+    }
+
+    nav > .mobile__menu {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 11;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    /*
+     * Just a hamburger
+     */
+    nav > .mobile__menu span {
+        display: block;
+        width: 35px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #cdcdcd;
+        border-radius: 3px;
+        z-index: 11;
+
+        transform-origin: 4px 0;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    nav > .mobile__menu span:first-child {
+        transform-origin: 0 0;
+    }
+
+    nav > .mobile__menu span:nth-last-child(2) {
+        transform-origin: 0 100%;
+    }
+
+    /*
+     * Transform all the slices of hamburger into a cross mark.
+     */
+    .checked span {
+        opacity: 1;
+        transform: rotate(-45deg) translate(-5px, -0px);
+        background: #232323;
+    }
+
+    /*
+     * But let's hide the second one.
+     */
+    .checked span:nth-last-child(2) {
+        opacity: 0;
+    }
+
+    /*
+     * the first one should go the other direction
+     */
+    .checked span:nth-last-child(3) {
+        transform: rotate(45deg) translate(0, -1px);
+    }
+
+}
