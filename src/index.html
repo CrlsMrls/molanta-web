@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>La Molanta</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Restaurante La Molanta. Natural - Rápido - Delicioso. c/ Parlament 36, Barcelona">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:700|Montserrat" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="mobile">
+        <div class="mobile__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile__block">
+            <a href="index.html">
+                <img src="assets/sello.png" alt="logo" class="logo">
+            </a>
+        </div>
+
+    </nav>
+
+    <nav role="navigation" class="navigation">
+        <a class="tab-logo" href="index.html"><img src="assets/sello.png" alt="logo" class="logo"></a>
+        <a class="tab goto-cover">La Molanta</a>
+        <a class="tab goto-intro">Carta</a>
+        <a class="tab goto-us">Nosotros</a>
+        <a class="tab goto-info">Información</a>
+        <div class="tabs__flags">
+            <a href="index.html"><img src="assets/flag-es.svg"></a>
+            <a href="index.html"><img src="assets/flag-ca.svg"></a>
+            <a href="index.html"><img src="assets/flag-en.svg"></a>
+        </div>
+    </nav>
+</header>
+<section id="cover" class="cover">
+    <article>
+        <img class="cover__logo" src="assets/logo-green.png">
+        <div class="cover__text">
+            Parlament 36<br>08015<br>Barcelona<br>
+        </div>
+    </article>
+</section>
+<section id="intro" class="intro">
+    <article>
+        <h1>Platos Saludables - Bocadillos - Ensaladas - Café de Origen - Lattes - Zumos - Frappés</h1>
+
+        <picture>
+            <source srcset="assets/molanta_dishes--small.jpg" media="(max-width: 1024px)">
+            <img src="assets/molanta_dishes--big.jpg" alt="Selección de platos">
+        </picture>
+        <p>
+            Oferim plats i begudes naturals amb un toc mediterrani. Entrepans gourmet, cafè d’origen,
+            plats saludables i lattes i frappees.
+        </p>
+        <p>
+            Coem les nostres matèries primes a baixa temperatura per respectar al màxim les seves
+            propietats nutricionals i organolèptiques. Elaborem la major part de la nostra carta perquè
+            ens agrada fer-ho a la nostra manera, sorprendre i meravellar als nostres clients i alhora
+            ajudar-los a portar una vida més saludable.
+        </p>
+        <a href="index.html">Descargar Carta</a>
+    </article>
+</section>
+<section id="us" class="us">
+    <article>
+        <h1>Nosotros</h1>
+        <p>
+            LaMolanta parteix del somni d’apropar la restauració als clients. Oferir productes nutritius,
+            saludables i deliciosos d’una manera pròxima i còmode, on la excel·lència del producte pren
+            el màxim protagonisme.
+        </p>
+        <p>
+            Volem minimitzar la petjada que el nostre restaurant te a l’entorn, per això som molt curosos
+            amb el reciclatge del cartró, vidre i plàstic que generem. Treballem amb envasos
+            compostables i reciclats, fets amb resines de blat de moro i fècula de patata. Fem
+            vermicompostatge de la fracció orgànica vegetal i amb l’humus alimentem les nostres plantes,
+            que ens ho agraeixen amb flors i fulles.
+        </p>
+        <p>
+            També som un projecte de persones. Per sobre de tot, creiem que el nostre equip humà és
+            l’autèntic motor del nostre projecte.
+        </p>
+    </article>
+</section>
+<section id="info" class="info">
+    <article>
+        <h1>Horarios</h1>
+        <ul>
+            <li><strong>Lunes</strong> cerrado</li>
+            <li><strong>Martes - Jueves</strong> 8h - 22h</li>
+            <li><strong>Viernes - Sábado</strong> 8h - 1h</li>
+            <li><strong>Domingo</strong> 8h - 17h</li>
+        </ul>
+    </article>
+    <article>
+        <h1>Datos de contacto</h1>
+        <ul>
+            <li><a href="https://goo.gl/maps/4nsCJMoJfTv" target="google">Calle Parlament 36</a></li>
+            <li>08015 Barcelona</li>
+            <li>info@molanta.com</li>
+            <li>+34 93 123 45 67</li>
+        </ul>
+    </article>
+</section>
+<footer>
+    Made with <span>&hearts;</span> by Molanta
+</footer>
+</body>
+<script>
+    const mobileMenu = document.querySelector('.mobile__menu');
+    const tabs = document.querySelector('.navigation');
+    const toogleNavigation = () => tabs.classList.toggle('shown');
+    mobileMenu.addEventListener('mousedown', toogleNavigation);
+    tabs.addEventListener('mousedown', toogleNavigation);
+
+    function navigateTo(event) {
+        for (const cls of event.target.classList) {
+            if (cls.indexOf('goto-') !== -1) {
+                document.querySelector('.' + cls.substring(5)).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    for (const tab of document.querySelectorAll('.tab')) {
+        tab.addEventListener('click', navigateTo)
+    }
+
+</script>
+</html>
