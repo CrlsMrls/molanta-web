@@ -3,9 +3,10 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
-    background-color: lightgray;
+    background-color: white;
+    line-height: 1.5;
 }
 
 html {
@@ -20,14 +21,15 @@ body {
 /*h1   { font-size: 2.4rem; } !* =24px *!*/
 
 h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     text-transform: uppercase;
 }
 
 .navigation {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     width: 100%;
@@ -38,27 +40,28 @@ h1 {
 }
 
 .tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
     color: #000;
-    letter-spacing: 0.1rem;
     transition: all 0.5s ease;
-    font-size: 25px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 25px;
+    cursor: pointer;
 }
-
 
 .tab-logo {
-    margin: auto;
+    margin: 15px;
 }
 
+.navigation__tabs {
+    display: flex;
+    flex-direction: row;
+}
 
 .tab.is-active {
     color: white;
     background: #00a970;
 }
-
 
 .tabs__flags {
     display: flex;
@@ -73,7 +76,6 @@ h1 {
 .tabs__flags img {
     height: 26px;
 }
-
 
 @media screen and (min-width: 839px) {
     .tab:hover {
@@ -102,50 +104,61 @@ header {
 
 section {
     width: 100%;
-    max-width: 1500px;
+    /*max-width: 1500px;*/
     margin: 0 auto;
 }
 
 section.cover {
     height: calc(100vh - 54px);
-    background: url("assets/LaMolanta__cover--big.jpg") no-repeat center center fixed;
+    background: url("assets/LaMolanta__cover2--big.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
 section.cover > article {
-    width: 50%;
-    margin: 0 auto;
+    width: 60%;
+    max-width: 1000px;
+    margin: 0 7%;
 }
 
 article .cover__logo {
     width: 100%;
-    margin-top: 15vh;
+    margin-top: 25%;
 }
 
 article .cover__text {
     width: 100%;
-    border: 1px solid whitesmoke;
+    border: 1px solid rgba(255, 255, 255, 0.7);;
     /*margin-top: 10vh;*/
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 10%;
+    padding: 50px 30px;
     text-align: center;
-    font-size: 4.5vmin;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
 }
 
 section.intro {
     background-color: white;
-    padding: 60px 0;
+    padding: 1px 0;
+}
+
+section.intro h1 {
+    margin: 100px 0;
 }
 
 section.intro > article {
     font-size: 1.25rem;
     margin: 0 auto;
     padding: 0 20px;
-    text-transform: uppercase;
     max-width: calc(70ch - 20px);
     line-height: 1.5;
     text-align: center;
+}
+
+section.intro p {
+    margin: 10% 0;
 }
 
 section.intro img {
@@ -186,7 +199,8 @@ section.intro a:active {
 }
 
 section.us {
-    padding: 1px 0;
+    padding: 70px 0;
+    margin: 100px;
     background: url(assets/molanta__us--big.jpg) no-repeat left top white;
     background-size: contain;
 }
@@ -199,9 +213,8 @@ section.us > article {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-
 section.info {
-    background-color: white;
+    background-color: #f3f3f3;
     padding: 60px 0;
     display: flex;
     flex-direction: row;
@@ -214,46 +227,91 @@ section.info > article {
 
 ul {
     list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
 }
 
 footer {
     width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
     font-size: 12px;
-    background-color: darkgray;
+    background-color: #3f3f3f;
+    text-align: center;
+    color: white;
 }
 
 footer span {
     color: #e25555;
 }
 
+section.info a:link,
+section.info a:visited {
+    text-decoration: none;
+    color: #00a970;
+}
+
+section.info a:active,
+section.info a:hover {
+    text-decoration: underline;
+    color: rgba(0, 169, 112, 0.5);
+}
+
+section.info a:after {
+    display: inline-block;
+    content: ' ';
+    background-image: url(assets/share.svg);
+    background-size: 12px 12px;
+    height: 12px;
+    width: 12px;
+    margin-left: 5px;
+}
+
 @media all and (max-width: 1024px) {
+
+    section.cover > article {
+        width: 65%;
+        margin: 0 5%;
+    }
+
+    article .cover__logo {
+        margin-top: 5vmax;
+    }
+
+    article .cover__text {
+        padding: 30px 10px;
+        font-size: 0.9rem;
+    }
 }
 
 @media all and (max-width: 839px) {
     section.cover {
-        background-image: url("assets/LaMolanta__cover--small.jpg");
+        background-image: url("assets/LaMolanta__cover2--small.jpg");
+        background-attachment: scroll;
+
     }
 
     section.us {
         background: url(assets/molanta__us--small.jpg) no-repeat left top white;
+        padding: 7px 0;
+        margin: 10px;
     }
-/*}*/
-/**/
-/*@media all and (max-width: 480px) {*/
 
+    /*}*/
+    /*@media all and (max-width: 480px) {*/
     section p {
         font-size: 1rem;
-        /*width: 60ch;*/
     }
 
     section.cover {
         margin-top: -20px;
     }
 
+    article .cover__text {
+        padding: 30px 10px;
+        font-size: 1rem;
+    }
+
     section.intro {
-        padding: 10px 0;
+        padding: 60px 0;
     }
 
     section.intro article {
@@ -300,6 +358,10 @@ footer span {
     .navigation.shown {
         left: 0;
         transition: left 1s ease;
+    }
+
+    .navigation__tabs {
+        flex-direction: column;
     }
 
     nav > .mobile__menu {
