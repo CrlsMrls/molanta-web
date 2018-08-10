@@ -172,7 +172,8 @@ section.intro a {
     margin: 0;
     text-decoration: none;
     text-transform: uppercase;
-    background: #00a970;
+    /*Accessibility insufficient contrast - background: #00a970;*/
+    background: #006644;
     color: #ffffff;
     font-family: sans-serif;
     font-size: 1rem;
