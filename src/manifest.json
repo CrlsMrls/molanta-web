@@ -1,0 +1,21 @@
+{
+  "name": "LaMolanta",
+  "short_name": "La Molanta",
+  "start_url": "/?utm_source=a2hs",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Restaurante La Molanta. Natural - Rápido - Delicioso. c/ Parlament 36, Barcelona",
+  "icons": [{
+    "src": "assets/sello.small.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "assets/sello.medium.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "assets/sello.png",
+    "sizes": "540x540",
+    "type": "image/png"
+  }]
+}
