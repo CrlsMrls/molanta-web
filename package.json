@@ -1,0 +1,8 @@
+{
+  "name": "LaMolanta",
+  "version": "0.0.1",
+  "description": "Static website for La Molanta",
+  "repository": "https://www.lamolanta.com",
+  "author": "Carlos Morales",
+  "license": "MIT"
+}
