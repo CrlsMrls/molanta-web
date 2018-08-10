@@ -247,7 +247,8 @@ footer span {
 section.info a:link,
 section.info a:visited {
     text-decoration: none;
-    color: #00a970;
+    /*Accessibility insufficient contrast - color: #00a970;*/
+    color: #006644;
 }
 
 section.info a:active,
@@ -384,7 +385,7 @@ section.info a:after {
         margin-bottom: 5px;
         position: relative;
 
-        background: #cdcdcd;
+        background: rgba(0, 0, 0, 0.6);
         border-radius: 3px;
         z-index: 11;
 
