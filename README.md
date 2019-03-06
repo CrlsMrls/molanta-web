@@ -1,4 +1,4 @@
-# La Molanta website
+# La Molanta website
 
 Source code for [La Molanta restaurant](https://www.lamolanta.com) located in Carrer Parlament 36, Barcelona, Spain.
 
